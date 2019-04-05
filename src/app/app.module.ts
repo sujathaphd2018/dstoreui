@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { WebStorageModule } from 'ngx-store';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
 
 
 
@@ -21,6 +22,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 /*services*/
 
 import { DashboardService } from "./services/services"
+//import {RequestInterceptor} from "./services/interceptor";
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { DashboardService } from "./services/services"
     AppRoutingModule,
     HttpModule,
     FormsModule,
+    HttpClientModule,
     NgbModule.forRoot()
   ],
   providers: [DashboardService],

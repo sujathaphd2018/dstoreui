@@ -53,7 +53,9 @@ export class RegisterComponent implements OnInit {
           this.userRegisterInfo = data;
           this.showStepTwo = true;
 
-	    })
+	    }, error=>{
+        console.log(error)
+      })
 	  }
   }
 
